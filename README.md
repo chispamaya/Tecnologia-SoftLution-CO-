@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
 
-Proyecto en desarrollo, un sistema de automatizacion de stock para Black Iron
+Proyecto en desarrollo, un foro para facilitar la comunicación en tiempo real para la empresa Tecnologïa
 
 ## :hammer:Funcionalidades del proyecto
 - `Funcionalidad 1`: Visualizacion de stock
