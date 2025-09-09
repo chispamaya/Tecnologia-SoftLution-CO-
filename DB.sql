@@ -1,9 +1,9 @@
-drop database if exists tecnologia
-create database tecnologia
-use database tecnologia
+drop database if exists tecnologia;
+create database tecnologia;
+use tecnologia;
 
 create table usuario(
-	nombre int PRIMARY KEY,
+	nombre varchar(50) PRIMARY KEY,
 	contrasenia varchar (50),
 	adminOno boolean,
 	email varchar(50)
