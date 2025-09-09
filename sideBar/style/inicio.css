@@ -1,0 +1,138 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --sideBarHeader: #14213d;
+    --texto: #ffffff;
+    --background: #212121;
+    --botonV: #341243;
+    --links: #8634aa;
+    --backgroundForm: #000000;
+  }
+  
+  /* HEADER */
+  .header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--sideBarHeader);
+    width: 100%;
+    height: auto;
+  }
+  
+    
+/* SIDEBAR - Desktop */
+.sideBar {
+    background-color: var(--sideBarHeader);
+    width: 20%;
+    min-height: 100vh;
+    padding: 20px;
+}
+  
+.lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+li{
+    position: relative;
+}
+.lista li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.lista li a:hover {
+    color: #1abc9c;
+}
+
+/* Ocultar botones por defecto */
+.menu,
+#cerrar {
+display: none;
+}
+
+/* 🔹 Mobile */
+@media (max-width: 576px) {
+    /* El sidebar desaparece en mobile */
+    .sideBar {
+        width: auto;
+        min-height: auto;
+        background: none;
+        padding: 10px;
+    }
+
+    /* Botón hamburguesa */
+    .menu {
+        display: block;
+        font-size: 1.8em;
+        border: none;
+        background: transparent;
+        color: #1abc9c;
+        cursor: pointer;
+    }
+
+    /* Overlay del menú */
+    .sub-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        background: #294936;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 2rem;
+        gap: 2rem;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Menú abierto */
+    .sub-header.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Botón cerrar dentro del menú */
+    #cerrar {
+        display: block;
+        font-size: 1.5em;
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+
+    /* Links en columna */
+    .lista {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .lista li a {
+        font-size: 1.2rem;
+    }
+}
+
+.material-symbols-outlined{
+    font-size: 2em;
+    margin-right: 0.5em;
+    color: var(--texto);
+    position: absolute;
+    top: -4.5px;
+    left: 5px;
+}
