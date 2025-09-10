@@ -15,13 +15,20 @@ if ($r_check->num_rows == 0) {
   if ($busqueda === false) {
     echo "El email ingresado no tiene el dominio de la empresa. Por favor favor ingrese uno válido";
   } else {
-    $query = "INSERT INTO usuario(nombre, contrasenia, adminONo, email) VALUES ('" . $nombre . "','" . $contrasenia . "', '" . $admin . "', '" . $email . "')" or
-      die("Error " . mysqli_error($link));
-    $result = $link->query($query);
-    if ($result == 1) {
-      echo "'¡Datos cargados correctamente!'<br/>";
-    } else {
-      echo "<h3>Ha ocurrido un error durante el ingreso de la información!</h3><br/>";
+    $check2 = "SELECT * from usuario where email = '$email'";
+    $consulta = $link->query($check2);
+    if($consulta->num_rows == 0){
+      $query = "INSERT INTO usuario(nombre, contrasenia, adminONo, email) VALUES ('" . $nombre . "','" . $contrasenia . "', '" . $admin . "', '" . $email . "')" or
+        die("Error " . mysqli_error($link));
+      $result = $link->query($query);
+      if ($result == 1) {
+        echo "'¡Datos cargados correctamente!'<br/>";
+      } else {
+        echo "<h3>Ha ocurrido un error durante el ingreso de la información!</h3><br/>";
+      }
+    }
+    else{
+      echo "El email ingresado ya existe en nuestra base de datos. Por favor intente con otro diferente.";
     }
   }
 } else {
