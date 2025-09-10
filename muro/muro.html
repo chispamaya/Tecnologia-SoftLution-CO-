@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muro de Anuncios - Softlution</title>
+    <link rel="stylesheet" href="stylesmuro.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+    <script src="muro.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="barra-lateral">
+        <ul class="menu-navegacion">
+            <li>
+                <a href="#" class="activo">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Mensajes</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>Nueva publicación</span>
+                </a>
+            </li>
+        </ul>
+        <div class="enlace-perfil">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contenedor-principal">
+        <div class="header">
+            <img class="logo" src="./logo.png" alt="Logo" />
+        </div>
+
+        <main class="muro">
+            <!-- PUBLICACIÓN 1 -->
+            <article class="publicacion" data-id="post1">
+                <div class="autor-publicacion">
+                    <img src="https://i.pravatar.cc/40?u=damiana39" alt="Avatar" class="avatar-autor">
+                    <span class="nombre-autor">Damiana39</span>
+                </div>
+                <div class="contenido-publicacion">
+                    <h2>Proyecto de Estrategia de Crecimiento</h2>
+                    <p>Este proyecto tiene como objetivo desarrollar e implementar una estrategia de crecimiento...</p>
+                    <a href="#" class="enlace-publicacion">LINK GITHUB</a>
+                </div>
+                <div class="acciones-publicacion">
+                    <button class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <span class="contador-like">0</span>
+                    <button class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+                    <span class="contador-dislike">0</span>
+                    <button class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
+                </div>
+                <div class="comentarios">
+                    <div class="lista-comentarios"></div>
+                    <div class="input-comentario">
+                        <input type="text" placeholder="Escribir comentario...">
+                        <button>Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PUBLICACIÓN 2 -->
+            <article class="publicacion" data-id="post2">
+                <div class="autor-publicacion">
+                    <img src="https://i.pravatar.cc/40?u=johndoe" alt="Avatar" class="avatar-autor">
+                    <span class="nombre-autor">johndoe</span>
+                </div>
+                <div class="contenido-publicacion">
+                    <h2>Desarrollo de App Móvil</h2>
+                    <p>Necesitamos un equipo para el desarrollo de una nueva app móvil para iOS y Android...</p>
+                    <a href="#" class="enlace-publicacion">Ver más</a>
+                </div>
+                <div class="acciones-publicacion">
+                    <button class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <span class="contador-like">0</span>
+                    <button class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+                    <span class="contador-dislike">0</span>
+                    <button class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
+                </div>
+                <div class="comentarios">
+                    <div class="lista-comentarios"></div>
+                    <div class="input-comentario">
+                        <input type="text" placeholder="Escribir comentario...">
+                        <button>Añadir</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+</body>
+</html>
