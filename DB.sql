@@ -41,9 +41,9 @@ create table votar(
 
 create table post(
 	id int AUTO_INCREMENT primary key,
-	titulo varchar(500),
+	titulo varchar(50),
 	contenido varchar(500),
-	link varchar(100),
+	link varchar(50),
 	nombreUsuario varchar(50),
 	FOREIGN KEY(nombreUsuario) references usuario(nombre)
 );
@@ -64,5 +64,6 @@ create table valorar (
 	idPost int,
 	FOREIGN KEY(idPost) references post(id)
 );
+
 
 
