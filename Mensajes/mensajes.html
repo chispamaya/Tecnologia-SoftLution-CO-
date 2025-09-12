@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensajes - Softlution</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img class="logo" src="./logo.png" alt="Logo Softlution & Co">
+  </header>
+
+  <!-- NAV -->
+  <nav class="barra-lateral">
+    <ul class="menu-navegacion">
+      <li><a href="../Muro/muro.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+      <li><a href="../Mensajes/mensajes.html" class="activo"><i class="fa-solid fa-paper-plane"></i><span>Mensajes</span></a></li>
+      <li><a href="../Nueva Publicacion/nuevapublicacion.html"><i class="fa-solid fa-circle-plus"></i><span>Nueva publicación</span></a></li>
+    </ul>
+    <div class="enlace-perfil">
+      <a href="../Perfil/perfil.html"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="contenedor-principal">
+    <main class="mensajes">
+
+      <!-- LISTA DE CHATS -->
+      <aside class="lista-conversaciones">
+        <!-- Buscador con lupa -->
+        <div class="buscador-chats">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscarPersona" placeholder="Buscar personas...">
+        </div>
+
+        <h2>Chats</h2>
+        <ul>
+          <li data-chat="chat1" class="activo">
+            <img src="https://i.pravatar.cc/40?u=johndoe" class="avatar">
+            <span>John Doe</span>
+          </li>
+          <li data-chat="chat2">
+            <img src="https://i.pravatar.cc/40?u=ana" class="avatar">
+            <span>Ana García</span>
+          </li>
+          <li data-chat="chat3">
+            <img src="https://i.pravatar.cc/40?u=maria" class="avatar">
+            <span>María Pérez</span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- CHAT -->
+      <section class="chat">
+        <div class="chat-header">
+          <img src="https://i.pravatar.cc/40?u=johndoe" class="avatar">
+          <span class="nombre-chat">John Doe</span>
+        </div>
+        <div class="chat-mensajes" id="chat1"></div>
+
+        <div class="chat-input">
+          <button class="btn-emoji"><i class="fa-regular fa-face-smile"></i></button>
+          <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
+          <button id="btnEnviar"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+
+        <div class="emoji-panel oculto" id="emojiPanel">
+          😀 😁 😂 🤣 😍 😎 😢 😡 👍 👎 🙌 👀 ❤️ 🔥
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
