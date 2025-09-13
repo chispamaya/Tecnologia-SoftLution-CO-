@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva Publicación - Softlution</title>
+  <link rel="stylesheet" href="stylesnueva.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+  <!-- NAV LATERAL <script src="nueva.js" defer></script> -->
+</head>
+<body>
+  <!-- NAV LATERAL -->
+  <nav class="barra-lateral">
+    <ul class="menu-navegacion">
+      <li><a href="muro.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+      <li><a href="mensajes.html"><i class="fa-solid fa-paper-plane"></i><span>Mensajes</span></a></li>
+      <li><a href="nuevapublicacion.html" class="activo"><i class="fa-solid fa-circle-plus"></i><span>Nueva publicación</span></a></li>
+    </ul>
+    <div class="enlace-perfil">
+      <a href="#"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="contenedor-principal">
+    <div class="header">
+      <img class="logo" src="./logo.png" alt="Logo" />
+    </div>
+
+    <main class="formulario-publicacion">
+      <h2>Crear nueva publicación</h2>
+      <form id="formPublicacion" action="http://localhost/php/publiNueva.php" method="post">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="title" placeholder="Título del proyecto" required>
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name = "desc" rows="6" placeholder="Escribe la descripción..." required></textarea>
+
+        <label for="link">Link (opcional)</label>
+        <input type="url" name="url" id="link" placeholder="https://github.com/usuario/repositorio">
+
+        <button type="submit">Publicar</button>
+      </form>
+
+      <!-- PREVISUALIZACIÓN -->
+      <section id="preview" class="preview oculto">
+        <article class="publicacion">
+          <h3 class="preview-titulo"></h3>
+          <p class="preview-descripcion"></p>
+          <a class="preview-link oculto" target="_blank">Link GitHub</a>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
