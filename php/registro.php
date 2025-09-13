@@ -4,7 +4,7 @@ include("conexion.php");
 $nombre = $_POST['user'];
 $email = $_POST['email'];
 $contrasenia = $_POST['password'];
-$admin = false;
+$admin = 0;
 
 $condicion = "@tecnologia.com";
 
@@ -22,9 +22,13 @@ if ($r_check->num_rows == 0) {
         die("Error " . mysqli_error($link));
       $result = $link->query($query);
       if ($result == 1) {
-        echo "'¡Datos cargados correctamente!'<br/>";
+        $_SESSION['nombre'] = $nombre;
+        $_SESSION['email'] = $email;
+        $_SESSION['contrasenia'] = $contrasenia;
+        $_SESSION['logueado'] = true;
+        header("Location: /nueva_Publicacion/nuevapublicacion.html");
       } else {
-        echo "<h3>Ha ocurrido un error durante el ingreso de la información!</h3><br/>";
+        echo "<h3>Ha ocurrido un error durante el ingreso de la información!</h3><br/>" . mysqli_error($link);
       }
     }
     else{
@@ -34,6 +38,5 @@ if ($r_check->num_rows == 0) {
 } else {
   echo "<h3>ERROR: Ya existe un usuario con ese nombre. </h3><br/>";
 }
-session_unset();
-session_destroy();
+
 ?>

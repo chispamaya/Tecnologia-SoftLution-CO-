@@ -23,8 +23,8 @@ else{
     $_SESSION['nombre'] = $nombre;
     $_SESSION['email'] = $email;
     $_SESSION['contrasenia'] = $contrasenia;
-    $S_SESSION['logueado'] = true;
-    header("Location: /inicio.html");
+    $_SESSION['logueado'] = true;
+    header("Location: ../Nueva%20Publicacion/nuevapublicacion.html");
 }
 
 ?>
