@@ -13,7 +13,7 @@ $r_check = $link->query($check);
 if ($r_check->num_rows == 0) {
   $busqueda = strpos($email, $condicion, -15);
   if ($busqueda === false) {
-    echo "El email ingresado no tiene el dominio de la empresa. Por favor favor ingrese uno válido";
+    echo "ED";
   } else {
     $check2 = "SELECT * from usuario where email = '$email'";
     $consulta = $link->query($check2);
@@ -26,17 +26,17 @@ if ($r_check->num_rows == 0) {
         $_SESSION['email'] = $email;
         $_SESSION['contrasenia'] = $contrasenia;
         $_SESSION['logueado'] = true;
-        header("Location: /nueva_Publicacion/nuevapublicacion.html");
+        echo "C";
       } else {
-        echo "<h3>Ha ocurrido un error durante el ingreso de la información!</h3><br/>" . mysqli_error($link);
+        echo "EI";
       }
     }
     else{
-      echo "El email ingresado ya existe en nuestra base de datos. Por favor intente con otro diferente.";
+      echo "EE";
     }
   }
 } else {
-  echo "<h3>ERROR: Ya existe un usuario con ese nombre. </h3><br/>";
+  echo "EN";
 }
 
 ?>

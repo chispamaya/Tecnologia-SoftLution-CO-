@@ -11,7 +11,7 @@ $query = "SELECT * FROM usuario WHERE email = '$email' AND contrasenia = '$contr
 $resultado = $link->query($query);
 
 if($resultado->num_rows == 0){
-    echo "El email o contraseña ingresados no coinciden o no existen en nuestra db. Por favor intente nuevamente.";
+    echo "E";
 }
 
 else{
@@ -24,7 +24,7 @@ else{
     $_SESSION['email'] = $email;
     $_SESSION['contrasenia'] = $contrasenia;
     $_SESSION['logueado'] = true;
-    header("Location: ../Nueva%20Publicacion/nuevapublicacion.html");
+    echo "C";
 }
 
 ?>

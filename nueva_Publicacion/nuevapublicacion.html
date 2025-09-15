@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nueva Publicación - Softlution</title>
   <link rel="stylesheet" href="stylesnueva.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
-  <!-- NAV LATERAL <script src="nueva.js" defer></script> -->
 </head>
 <body>
   <!-- NAV LATERAL -->
@@ -31,7 +29,7 @@
 
     <main class="formulario-publicacion">
       <h2>Crear nueva publicación</h2>
-      <form id="formPublicacion" action="http://localhost/php/publiNueva.php" method="post">
+      <form id="formPublicacion" action="/php/publiNueva.php" method="post">
         <label for="titulo">Título</label>
         <input type="text" id="titulo" name="title" placeholder="Título del proyecto" required>
 
@@ -44,15 +42,20 @@
         <button type="submit">Publicar</button>
       </form>
 
-      <!-- PREVISUALIZACIÓN -->
+      <!-- PREVISUALIZACIÓN 
       <section id="preview" class="preview oculto">
         <article class="publicacion">
           <h3 class="preview-titulo"></h3>
           <p class="preview-descripcion"></p>
-          <a class="preview-link oculto" target="_blank">Link GitHub</a>
+          <a class="preview-link oculto" target="_blank">Link</a>
+          <button id="publish">Publicar</button>
         </article>
       </section>
+      -->
+
     </main>
   </div>
+  <script src="/js/nueva.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesoxme/6.5.2/js/all.min.js"></script>
 </body>
 </html>
