@@ -31,7 +31,6 @@ document.querySelector("form").addEventListener("submit", function (prevenir) {
 })
 
 document.querySelector(".btn-descartar").addEventListener("click", function (prevenir) {
-    prevenir.preventDefault()
     fetch("/php/cerrarS.php")
         .then(tex => tex.text())
         .then(inf => {
