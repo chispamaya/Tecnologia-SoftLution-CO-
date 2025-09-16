@@ -1,3 +1,8 @@
+/* 
+
+CODIGO GPTEADO POR MARTO(no lo borre todavía por las dudas)
+
+
 document.querySelectorAll(".publicacion").forEach((post) => {
     const likeBtn = post.querySelector(".btn-like");
     const dislikeBtn = post.querySelector(".btn-dislike");
@@ -91,3 +96,70 @@ function abrirModal(post) {
         modal.remove();
     });
 }
+*/
+
+
+const muro = document.querySelector(".muro")
+
+fetch("/php/muro.php")
+    .then(d => d.json())
+    .then(post => {
+        muro.innerHTML = '';
+        post.forEach(info => {
+            if (info.link == "Sin Link") {
+                muro.innerHTML += `
+    <article class="publicacion">
+                <div class="autor-publicacion">
+                    <span class="nombre-autor">${info.nombreUsuario}</span>
+                </div>
+                <div class="contenido-publicacion">
+                    <h2>${info.titulo}</h2>
+                    <p>${info.contenido}</p>
+                </div>
+                <div class="acciones-publicacion">
+                    <button class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <span class="contador-like">0</span>
+                    <button class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+                    <span class="contador-dislike">0</span>
+                    <button class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
+                </div>
+                <div class="comentarios">
+                    <div class="lista-comentarios"></div>
+                    <div class="input-comentario">
+                        <input type="text" placeholder="Escribir comentario...">
+                        <button>Añadir</button>
+                    </div>
+                </div>
+            </article>
+            `
+            }
+            else{
+                muro.innerHTML += `
+        <article class="publicacion">
+                    <div class="autor-publicacion">
+                        <span class="nombre-autor">${info.nombreUsuario}</span>
+                    </div>
+                    <div class="contenido-publicacion">
+                        <h2>${info.titulo}</h2>
+                        <p>${info.contenido}</p>
+                        <a href="${info.link}" class="enlace-publicacion">LINK</a>
+                    </div>
+                    <div class="acciones-publicacion">
+                        <button class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                        <span class="contador-like">0</span>
+                        <button class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+                        <span class="contador-dislike">0</span>
+                        <button class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
+                    </div>
+                    <div class="comentarios">
+                        <div class="lista-comentarios"></div>
+                        <div class="input-comentario">
+                            <input type="text" placeholder="Escribir comentario...">
+                            <button>Añadir</button>
+                        </div>
+                    </div>
+                </article>
+                `
+            }
+})
+    })

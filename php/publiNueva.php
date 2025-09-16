@@ -17,11 +17,9 @@ $query = "INSERT INTO post(titulo, contenido, link, nombreUsuario) VALUES ('" . 
 $consulta = $link->query($query);
 if ($consulta == false) {
     echo "EP";
-    //"Ocurrio un error con el post: " . mysqli_error($link)
 }
 else {
     echo "C";
-    //Post Subido con éxito.
 }
 
 

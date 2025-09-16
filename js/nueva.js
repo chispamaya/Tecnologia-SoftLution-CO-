@@ -13,6 +13,7 @@ document.querySelector("form").addEventListener("submit", function(prevenir) {
                 break
             case "C":
                 alert("Publicación creada con éxito.")
+                document.querySelector("form").reset()
                 break
         }
     })
