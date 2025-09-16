@@ -62,8 +62,10 @@ create table valorar (
 	likeOdislike boolean,
 	nombreUsuario varchar(50),
 	idPost int,
+	FOREIGN KEY(nombreUsuario) references usuario(nombre),
 	FOREIGN KEY(idPost) references post(id)
 );
+
 
 
 
