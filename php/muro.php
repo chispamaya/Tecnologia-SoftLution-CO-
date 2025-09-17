@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("conexion.php");
-$consul = "SELECT titulo, contenido, link, nombreUsuario FROM post order by id DESC";
+$consul = "SELECT id, titulo, contenido, link, nombreUsuario FROM post order by id ASC";
 $query = $link->query($consul);
 
 $datos = [];

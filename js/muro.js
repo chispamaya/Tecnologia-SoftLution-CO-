@@ -100,15 +100,18 @@ function abrirModal(post) {
 
 
 const muro = document.querySelector(".muro")
-
+var cont = 1
 fetch("/php/muro.php")
     .then(d => d.json())
     .then(post => {
         muro.innerHTML = '';
         post.forEach(info => {
+            const articulo = document.createElement('article')
+            articulo.className = 'publicacion'
+            articulo.id = info.id
+            var aniadir
             if (info.link == "Sin Link") {
-                muro.innerHTML += `
-    <article class="publicacion">
+                aniadir = `
                 <div class="autor-publicacion">
                     <span class="nombre-autor">${info.nombreUsuario}</span>
                 </div>
@@ -117,11 +120,11 @@ fetch("/php/muro.php")
                     <p>${info.contenido}</p>
                 </div>
                 <div class="acciones-publicacion">
-                    <button class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <button type="button" class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
                     <span class="contador-like">0</span>
-                    <button class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+                    <button type="button" class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
                     <span class="contador-dislike">0</span>
-                    <button class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
+                    <button type="button" class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
                 </div>
                 <div class="comentarios">
                     <div class="lista-comentarios"></div>
@@ -130,12 +133,10 @@ fetch("/php/muro.php")
                         <button>Añadir</button>
                     </div>
                 </div>
-            </article>
             `
             }
-            else{
-                muro.innerHTML += `
-        <article class="publicacion">
+            else {
+                aniadir = `
                     <div class="autor-publicacion">
                         <span class="nombre-autor">${info.nombreUsuario}</span>
                     </div>
@@ -145,11 +146,11 @@ fetch("/php/muro.php")
                         <a href="${info.link}" class="enlace-publicacion">LINK</a>
                     </div>
                     <div class="acciones-publicacion">
-                        <button class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
+                        <button type="button" class="btn-accion btn-like"><i class="fa-solid fa-thumbs-up"></i></button>
                         <span class="contador-like">0</span>
-                        <button class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+                        <button type="button" class="btn-accion btn-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
                         <span class="contador-dislike">0</span>
-                        <button class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
+                        <button type="button" class="btn-accion btn-chat"><i class="fa-solid fa-comment-dots"></i> Comentarios</button>
                     </div>
                     <div class="comentarios">
                         <div class="lista-comentarios"></div>
@@ -158,8 +159,110 @@ fetch("/php/muro.php")
                             <button>Añadir</button>
                         </div>
                     </div>
-                </article>
                 `
             }
-})
+            articulo.innerHTML = aniadir
+            muro.appendChild(articulo)
+            var like  = articulo.querySelector(".btn-like")
+            var dislike = articulo.querySelector(".btn-dislike")
+            var cantLikes = articulo.querySelector(".contador-like")
+            var cantDislikes = articulo.querySelector(".contador-dislike")
+
+            var id = new FormData
+
+            id.append('id', info.id)
+
+            fetch("/php/cuentaVal.php", {
+                method: 'POST',
+                body: id
+            })
+            .then(resp => resp.json())
+            .then( info => {
+                cantLikes.innerHTML = info.likes
+                cantDislikes.innerHTML = info.dislikes
+                switch(info.hayLike){
+                    case "SI":
+                        like.classList.add('active')
+                        dislike.classList.remove('active')
+                        break
+                    case "NO":
+                        dislike.classList.add("active")
+                        like.classList.remove("active")
+                        break
+                    case "NODIO":
+                        like.classList.remove("active")
+                        dislike.classList.remove("active")
+                        break
+                }
+            })
+            cont++
+        })
     })
+muro.addEventListener("click", (e) => {
+    const l = e.target.closest(".btn-like")
+    var post = e.target.closest("article")
+    const cl = post.querySelector(".contador-like")
+    const d = e.target.closest(".btn-dislike")
+    const cd = post.querySelector(".contador-dislike")
+    if (l) {
+        var id = post.id
+        var infoPalJs = new FormData
+        infoPalJs.append("id", id)
+        fetch("/php/like.php", {
+        method: "POST",
+        body: infoPalJs
+        })
+        .then(a => a.text())
+        .then(tex =>{
+            const cli = parseInt(cl.textContent)
+            const cdi = parseInt(cd.textContent)
+            switch(tex){
+                case "I":
+                    l.classList.add("active")
+                    cl.innerHTML = `${cli + 1}`
+                    break
+                case "U":
+                    d.classList.remove("active")
+                    l.classList.add("active")
+                    cl.innerHTML = `${cli + 1}`
+                    cd.innerHTML = `${cdi -1}`
+                    break
+                case "D":
+                    l.classList.remove("active")
+                    cl.innerHTML = `${cli -1}`
+                    break
+            }
+        })
+    }
+    if (d) {
+        var id = post.id
+        var infoPalJs = new FormData
+        infoPalJs.append("id", id)
+        fetch("/php/dislike.php", {
+        method: "POST",
+        body: infoPalJs
+        })
+        .then(a => a.text())
+        .then(tex =>{
+            const cli = parseInt(cl.textContent)
+            const cdi = parseInt(cd.textContent)
+            switch(tex){
+                case "I":
+                    d.classList.add("active")
+                    cd.innerHTML = `${cdi + 1}`
+                    break
+                case "U":
+                    d.classList.add("active")
+                    l.classList.remove("active")
+                    cd.innerHTML = `${cdi + 1}`
+                    cl.innerHTML = `${cli -1}`
+                    break
+                case "D":
+                    d.classList.remove("active")
+                    cd.innerHTML = `${cdi -1}`
+                    break
+            }
+        })
+    }
+})
+
