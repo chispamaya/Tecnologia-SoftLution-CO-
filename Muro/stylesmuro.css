@@ -210,8 +210,7 @@ body {
 }
 
 /* --- COMENTARIOS --- */
-.comentarios {
-    display: none;
+.comentar {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
@@ -288,4 +287,9 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: #fff;
+}
+
+
+.oculto{
+    display:none
 }

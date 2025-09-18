@@ -4,8 +4,8 @@ include("conexion.php");
 $nombre = $_SESSION['nombre'];
 $idP = $_POST['id'];
 
-$calculL = "SELECT COUNT(likeOdislike) FROM valorar WHERE idPost = '". $idP ."' AND nombreUsuario = '". $nombre ."' AND likeOdislike = '". 1 ."'";
-$calculD = "SELECT COUNT(likeOdislike) FROM valorar WHERE idPost = '". $idP ."' AND nombreUsuario = '". $nombre ."' AND likeOdislike = '". 0 ."'";
+$calculL = "SELECT COUNT(likeOdislike) FROM valorar WHERE idPost = '". $idP ."' AND likeOdislike = '". 1 ."'";
+$calculD = "SELECT COUNT(likeOdislike) FROM valorar WHERE idPost = '". $idP ."' AND likeOdislike = '". 0 ."'";
 
 $calculaL = $link->query($calculL);
 $calculaD = $link->query($calculD);
