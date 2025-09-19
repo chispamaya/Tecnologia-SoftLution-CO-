@@ -22,62 +22,11 @@ body {
     display: flex;
 }
 
-/* --- NAV LATERAL (de tu referencia) --- */
-.barra-lateral {
-    width: 260px;
-    background-color: var(--sideBarHeader);
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-}
 
-.menu-navegacion {
-    list-style: none;
-    flex-grow: 1;
-}
-
-.menu-navegacion li a,
-.enlace-perfil a {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #a0a8b9;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.menu-navegacion li a:hover,
-.enlace-perfil a:hover {
-    background-color: #2a2f4c;
-    color: #ffffff;
-}
-
-/* Estilo para el link activo */
-.menu-navegacion li a.activo,
-.enlace-perfil a.activo {
-    background-color: #7b4dff; /* Un color similar al de tu barra de 'Inicio' */
-    color: #ffffff;
-}
-
-.menu-navegacion li a i,
-.enlace-perfil a i {
-    font-size: 1.3rem;
-    width: 25px;
-    text-align: center;
-}
 
 /* --- CONTENEDOR PRINCIPAL (de tu referencia) --- */
 .contenedor-principal {
-    margin-left: 260px;
-    width: calc(100% - 260px);
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
