@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mensajes - Softlution</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header">
-    <img class="logo" src="./logo.png" alt="Logo Softlution & Co">
+    <img class="logo" src="/InicioSesionYregistro/logo/logo.png" alt="Logo Softlution & Co">
   </header>
 
   <!-- NAV -->
   <nav class="barra-lateral">
     <ul class="menu-navegacion">
-      <li><a href="../Muro/muro.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
-      <li><a href="../Mensajes/mensajes.html" class="activo"><i class="fa-solid fa-paper-plane"></i><span>Mensajes</span></a></li>
-      <li><a href="../Nueva Publicacion/nuevapublicacion.html"><i class="fa-solid fa-circle-plus"></i><span>Nueva publicación</span></a></li>
+      <li><a href="/Muro/muro.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a></li>
+      <li><a href="/Mensajes/mensajes.html" class="activo"><i class="fa-solid fa-paper-plane"></i><span>Mensajes</span></a></li>
+      <li><a href="/nueva_Publicacion/nuevapublicacion.html"><i class="fa-solid fa-circle-plus"></i><span>Nueva publicación</span></a></li>
     </ul>
     <div class="enlace-perfil">
-      <a href="../Perfil/perfil.html"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+      <a href="/Perfil/perfil.html"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
     </div>
   </nav>
 
@@ -40,19 +38,7 @@
         </div>
 
         <h2>Chats</h2>
-        <ul>
-          <li data-chat="chat1" class="activo">
-            <img src="https://i.pravatar.cc/40?u=johndoe" class="avatar">
-            <span>John Doe</span>
-          </li>
-          <li data-chat="chat2">
-            <img src="https://i.pravatar.cc/40?u=ana" class="avatar">
-            <span>Ana García</span>
-          </li>
-          <li data-chat="chat3">
-            <img src="https://i.pravatar.cc/40?u=maria" class="avatar">
-            <span>María Pérez</span>
-          </li>
+        <ul class ="chats">
         </ul>
       </aside>
 
@@ -77,6 +63,8 @@
 
     </main>
   </div>
+  <script src="/js/mensajes.js"></script>
   <script src="/js/verificarS.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
 </body>
 </html>

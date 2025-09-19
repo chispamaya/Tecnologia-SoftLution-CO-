@@ -88,26 +88,26 @@ fetch("/php/muro.php")
             articulo.innerHTML = aniadir
             muro.appendChild(articulo)
             id.append('idP', info.id)
-            
+
             fetch("/php/obtenerCom.php", {
-                method : 'post',
+                method: 'post',
                 body: id
             })
-            .then(a => a.json())
-            .then (comen => {
-                const divi = articulo.querySelector(".todos")
-                divi.innerHTML = ''
-                comen.forEach( co =>{
-                    divi.innerHTML += `
+                .then(a => a.json())
+                .then(comen => {
+                    const divi = articulo.querySelector(".todos")
+                    divi.innerHTML = ''
+                    comen.forEach(co => {
+                        divi.innerHTML += `
                         <div class="comentario">
                             <span class="nombre-usuario">${co.nombreUsuario}:</span>
                             <span class="texto-comentario">${co.contenido}</span>
                         </div>
                     `
 
-            })
-        })
-    
+                    })
+                })
+
             var id2 = new FormData
             id2.append('id', info.id)
             var like = articulo.querySelector(".btn-like")
@@ -139,6 +139,21 @@ fetch("/php/muro.php")
                             break
                     }
                 })
+            const form = articulo.querySelector("form.comentar")
+            form.addEventListener("submit", (ev) => {
+                ev.preventDefault()
+                const todo = new FormData(form)
+                todo.append("idP", articulo.id)
+
+                fetch("/php/comentar.php", {
+                    method: 'POST',
+                    body: todo
+                })
+                    .then(() => {
+                        alert("Comentario ingresado con éxito")
+                        form.reset()
+                    })
+            })
             cont++
         })
     })
@@ -217,21 +232,7 @@ muro.addEventListener("click", (e) => {
     if (bComents) {
         coments = post.querySelector(".comentarios")
         coments.classList.toggle("oculto")
-        form = post.querySelector("form")
-        form.addEventListener("submit", (e) => {
-            e.preventDefault()
-            todo = new FormData(form)
-            todo.append("idP", post.id)
-            fetch("/php/comentar.php", {
-                method: 'POST',
-                body: todo
-            })
-            alert("Comentario ingresado con éxito")
-            form.reset()
-        })
     }
-
-}
-)
+})
 
 

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --sideBarHeader: #14213d;
+  --texto: #ffffff;
+  --background: #212121;
+  --sideBarMain: #3C3C3C;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background: #1e1e1e; color: #f0f0f0; }
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--sideBarHeader);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1000;
+  padding: 0 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+.header .logo { height: 60px; object-fit: contain; }
+
+/* NAV */
+.barra-lateral {
+  width: 260px;
+  background: var(--sideBarHeader);
+  height: calc(100vh - 80px);
+  position: fixed;
+  top: 80px; left: 0;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-navegacion { list-style: none; }
+.menu-navegacion li a, .enlace-perfil a {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem; margin-bottom: .5rem;
+  border-radius: 8px;
+  text-decoration: none; color: #a0a8b9;
+  transition: background .3s, color .3s;
+}
+.menu-navegacion li a:hover, .enlace-perfil a:hover { background: #2a2f4c; color: #fff; }
+.menu-navegacion li a.activo { background: #7b4dff; color: #fff; }
+.menu-navegacion i { font-size: 1.3rem; }
+
+/* BUSCADOR DE CHATS */
+.buscador-chats {
+  display: flex;
+  align-items: center;
+  background: #3e3e3e;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.buscador-chats i { color: #bbb; margin-right: 0.5rem; }
+.buscador-chats input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+/* LAYOUT */
+.contenedor-principal {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  display: flex; flex-direction: column;
+}
+.mensajes { display: flex; flex-grow: 1; height: 100%; }
+
+/* LISTA DE CHATS */
+.lista-conversaciones {
+  width: 280px; background: #2c2c2c;
+  border-right: 1px solid #444; padding: 1rem;
+}
+.lista-conversaciones h2 { margin-bottom: 1rem; }
+.lista-conversaciones ul { list-style: none; }
+.lista-conversaciones li {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .8rem; border-radius: 8px; cursor: pointer;
+}
+.lista-conversaciones li:hover, .lista-conversaciones li.activo { background: #3e3e3e; }
+.lista-conversaciones .avatar { width: 40px; border-radius: 50%; }
+
+/* CHAT */
+.chat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+}
+
+.chat-header {
+  display: flex; align-items: center; gap: .8rem;
+  padding: 1rem; border-bottom: 1px solid #444;
+}
+.chat-header .avatar { width: 40px; border-radius: 50%; }
+
+.chat-mensajes {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.mensaje {
+  max-width: 60%; padding: .6rem 1rem;
+  border-radius: 12px; font-size: .95rem;
+}
+.mensaje.recibido { background: #3e3e3e; align-self: flex-start; }
+.mensaje.enviado { background: #7b4dff; color: #fff; align-self: flex-end; }
+
+.chat-input {
+  display: flex;
+  gap: .5rem;
+  padding: .8rem;
+  border-top: 1px solid #444;
+  flex-shrink: 0;
+}
+.chat-input input {
+  flex-grow: 1; padding: .6rem 1rem;
+  border: none; border-radius: 20px; background: #2c2c2c; color: #fff;
+}
+.chat-input button {
+  border: none; background: #7b4dff; color: #fff;
+  border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+  display: flex; justify-content: center; align-items: center;
+}
+.chat-input .btn-emoji { background: #3e3e3e; }
+
+/* PANEL EMOJIS */
+.emoji-panel {
+  background: #2c2c2c; padding: 1rem;
+  border-top: 1px solid #444;
+  display: flex; flex-wrap: wrap; gap: .5rem;
+}
+.emoji-panel span, .emoji-panel { cursor: pointer; font-size: 1.3rem; }
+.oculto { 
+  display: none !important; 
+}
