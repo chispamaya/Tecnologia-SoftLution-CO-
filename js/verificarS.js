@@ -8,7 +8,7 @@ fetch('/php/verificarS.php')
             }
         }
         else if(log == "L"){
-            if(window.location.pathname == "/index.html" || window.location.pathname == "/InicioSesionYregistro/registro/registro.html"){
+            if(window.location.pathname == "/index.html" || window.location.pathname == "/InicioSesionYregistro/registro/registro.html" || window.location.pathname == "/"){
                 window.location.href = "/Muro/muro.html";
             }
         }
