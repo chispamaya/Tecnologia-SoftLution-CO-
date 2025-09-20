@@ -3,7 +3,7 @@ fetch('/php/verificarS.php')
     .then(log => {
         if(log == "NL"){
             if(window.location.pathname != "/index.html" && window.location.pathname != "/InicioSesionYregistro/registro/registro.html"){
-                alert(window.location.pathname);
+                alert("No has iniciado sesión");
                 window.location.href = "/index.html";
             }
         }
