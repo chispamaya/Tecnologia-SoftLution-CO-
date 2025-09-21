@@ -70,6 +70,9 @@ create table valorar (
 );
 
 
+INSERT INTO `usuario` (`nombre`, `contrasenia`, `adminOno`, `email`) VALUES ('Grupo - Tecnologia', NULL, '1', NULL);
+
+
 
 
 
