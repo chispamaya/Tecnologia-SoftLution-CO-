@@ -30,21 +30,21 @@
 
         <ul class="lista">
           <li >
-            <a href="/inicio.html" class="menu-item no">
+            <a href="/Muro/muro.html" class="menu-item no">
               <span class="material-symbols-outlined">home</span>
               <span class="label">Inicio</span>
             </a>
           </li>
 
           <li>
-            <a href="/mensajes.html" class="menu-item activo">
+            <a href="mensajes.html" class="menu-item activo">
               <span class="material-symbols-outlined">send</span>
               <span class="label">Mensajes</span>
             </a>
           </li>
 
           <li>
-            <a href="/nueva.html" class="menu-item no">
+            <a href="/nueva_Publicacion/nuevapublicacion.html" class="menu-item no">
               <span class="material-symbols-outlined">add_circle</span>
               <span class="label">Nueva <br>publicación</span>
             </a>
@@ -67,7 +67,7 @@
     <main class="mensajes">
 
       <!-- LISTA DE CHATS -->
-      <aside class="lista-conversaciones">
+      <div class="lista-conversaciones">
         <!-- Buscador con lupa -->
         <div class="buscador-chats">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -77,7 +77,7 @@
         <h2>Chats</h2>
         <ul class ="chats">
         </ul>
-      </aside>
+      </div>
 
       <!-- CHAT -->
       <section class="chat">
@@ -88,10 +88,11 @@
         <div class="chat-mensajes" id="chat1">
           <div class="mensaje recibido">Hola ¿Cómo estás?</div>
           <div class="mensaje enviado">Hola</div>
-          <div class="mensaje enviado">pelotudo</div>
+          
           <div class="mensaje recibido">chupame la pija</div>
 
-          
+          <div class="mensaje enviado" data-author="tu">Prueba mensaje propio</div>
+          <div class="mensaje recibido" data-author="María">Prueba nombre</div>
           <div class="mensaje encuesta recibido">
             <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
             <div class="opciones">
@@ -111,28 +112,30 @@
           </div>
 
           
-          <div class="mensaje encuesta enviado">
-            <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
+          <div class="mensaje encuesta enviado poolEnviar">
+            <label for="titulo">Titulo</label>
+            <input name="titulo" class="escribirOp"  type="text" placeholder="Añade un titulo">
             
             <div class="opciones">
-              <button>🔵 Azul</button>
-              <button>🔴 Rojo</button>
-              <button>🟢 Verde</button>
+              <label for="opcion">Opciones</label>
+
+              <input name="opcion" class="escribirOp" type="text" placeholder="Escribe una opción...">
+            
             </div>
 
             <!-- Campo para añadir nueva opción -->
             <div class="nueva-opcion">
-              <input type="text" placeholder="Escribe una opción...">
-              <button class="btn-agregar-opcion">➕ Añadir opción</button>
+              <button type="submit" class="btn-agregar-opcion botoncito">➕ Añadir opción</button>
             </div>
 
-            <!-- Botón enviar encuesta centrado -->
             <div class="boton-enviar-encuesta">
-              <button id="btnEnviar"><i class="fa-solid fa-paper-plane"></i></button>
+              <button type="submit" class="botoncito pa">Enviar encuesta</i></button>
             </div>
           </div>
         </div>
 
+
+        
         <div class="chat-input">
           <button class="btn-emoji"><i class="fa-regular fa-face-smile"></i></button>
           <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
@@ -149,6 +152,7 @@
 
     </main>
   </div>
+  <script src="/SideBar/main.js"></script>
   <script src="/js/mensajes.js"></script>
   <script src="/js/verificarS.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
