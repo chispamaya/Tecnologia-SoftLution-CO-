@@ -20,6 +20,7 @@ create table mensaje (
 
 create table pool(
 	id int AUTO_INCREMENT primary key,
+	titulo varchar(50),
 	nombreUsuario varchar(50),
 	FOREIGN KEY(nombreUsuario) references usuario(nombre)
 );
@@ -65,6 +66,7 @@ create table valorar (
 	FOREIGN KEY(nombreUsuario) references usuario(nombre),
 	FOREIGN KEY(idPost) references post(id)
 );
+
 
 
 
