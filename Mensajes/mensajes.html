@@ -85,13 +85,62 @@
           <img src="https://i.pravatar.cc/40?u=johndoe" class="avatar">
           <span class="nombre-chat">John Doe</span>
         </div>
-        <div class="chat-mensajes" id="chat1"></div>
+        <div class="chat-mensajes" id="chat1">
+          <div class="mensaje recibido">Hola ¿Cómo estás?</div>
+          <div class="mensaje enviado">Hola</div>
+          <div class="mensaje enviado">pelotudo</div>
+          <div class="mensaje recibido">chupame la pija</div>
+
+          
+          <div class="mensaje encuesta recibido">
+            <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
+            <div class="opciones">
+              <button>🔵 Azul</button>
+              <button>🔴 Rojo</button>
+              <button>🟢 Verde</button>
+            </div>
+          </div>
+
+          <div class="mensaje encuesta enviado">
+            <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
+            <div class="opciones">
+              <button>🔵 Azul</button>
+              <button>🔴 Rojo</button>
+              <button>🟢 Verde</button>
+            </div>
+          </div>
+
+          
+          <div class="mensaje encuesta enviado">
+            <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
+            
+            <div class="opciones">
+              <button>🔵 Azul</button>
+              <button>🔴 Rojo</button>
+              <button>🟢 Verde</button>
+            </div>
+
+            <!-- Campo para añadir nueva opción -->
+            <div class="nueva-opcion">
+              <input type="text" placeholder="Escribe una opción...">
+              <button class="btn-agregar-opcion">➕ Añadir opción</button>
+            </div>
+
+            <!-- Botón enviar encuesta centrado -->
+            <div class="boton-enviar-encuesta">
+              <button id="btnEnviar"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
 
         <div class="chat-input">
           <button class="btn-emoji"><i class="fa-regular fa-face-smile"></i></button>
           <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
+          <button class="btn-poll">📊</button> <!-- BOTÓN ENCUESTA -->
           <button id="btnEnviar"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
+
+        
 
         <div class="emoji-panel oculto" id="emojiPanel">
           😀 😁 😂 🤣 😍 😎 😢 😡 👍 👎 🙌 👀 ❤️ 🔥
