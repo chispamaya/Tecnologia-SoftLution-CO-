@@ -14,8 +14,8 @@ Proyecto en desarrollo, un sistema de automatizacion de stock para Black Iron
 - `Funcionalidad 4`: Cancelar pedido/compra y reintegro de stock 
 Acceso al Proyecto;
 ## Tecnologías utilizadas
-![python_src_logo_icon_168037](https://github.com/user-attachments/assets/ab09d3aa-79f8-406a-b069-68eaf778359d)
 
+<img width="150" height="150" alt="frontend" src="https://github.com/user-attachments/assets/371d5c69-f654-43f6-98f0-e32412571909" />
 
 ## Personas Contribuyentes;
 <a href="https://github.com/chispamaya/SoftLution-CO/graphs/contributors">
