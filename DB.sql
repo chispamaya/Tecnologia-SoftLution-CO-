@@ -22,7 +22,9 @@ create table pool(
 	id int AUTO_INCREMENT primary key,
 	titulo varchar(50),
 	nombreUsuario varchar(50),
-	FOREIGN KEY(nombreUsuario) references usuario(nombre)
+	subidoDesp int,
+	FOREIGN KEY(nombreUsuario) references usuario(nombre),
+	FOREIGN KEY(subidoDesp) references mensaje(id)
 );
 
 create table opcionPool(
@@ -66,6 +68,7 @@ create table valorar (
 	FOREIGN KEY(nombreUsuario) references usuario(nombre),
 	FOREIGN KEY(idPost) references post(id)
 );
+
 
 
 
