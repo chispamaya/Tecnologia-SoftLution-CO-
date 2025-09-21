@@ -15,7 +15,7 @@ Proyecto en desarrollo, un sistema de automatizacion de stock para Black Iron
 Acceso al Proyecto;
 ## Tecnologías utilizadas
 
-<img width="150" height="150" alt="frontend" src="https://github.com/user-attachments/assets/371d5c69-f654-43f6-98f0-e32412571909" />
+<img <style>text align:center</style> width="150" height="150" alt="frontend" src="https://github.com/user-attachments/assets/371d5c69-f654-43f6-98f0-e32412571909" />
 
 ## Personas Contribuyentes;
 <a href="https://github.com/chispamaya/SoftLution-CO/graphs/contributors">
