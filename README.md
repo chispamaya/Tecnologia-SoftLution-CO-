@@ -16,7 +16,7 @@ Acceso al Proyecto;
 ## Tecnologías utilizadas
 
 <p align="center">
-  <img width="360" height="360" alt="image" src="https://github.com/user-attachments/assets/53d2a2af-929e-4d5c-aa93-9202a15a8f02" />
+  <img width="360" height="360" alt="frontend" src="https://github.com/user-attachments/assets/bf21544b-c7a7-40c7-b402-2c7d21b3928b" />
 </p>
 
 ## Personas Contribuyentes;
