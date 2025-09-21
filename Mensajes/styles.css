@@ -102,6 +102,63 @@ body {
 .mensaje.recibido { background: #3e3e3e; align-self: flex-start; }
 .mensaje.enviado { background: #7b4dff; color: #fff; align-self: flex-end; }
 
+.mensaje.encuesta {
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 70%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mensaje.encuesta.recibido {
+  background-color: #3e3e3e;
+  align-self: flex-start;
+}
+
+.mensaje.encuesta.enviado {
+  background-color: #7b4dff;
+  align-self: flex-end;
+}
+
+.mensaje.encuesta .opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mensaje.encuesta .opciones button {
+  background: #3e3e3e;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.mensaje.encuesta .opciones button:hover {
+  background: #7b4dff;
+}
+
+.btn-agregar-opcion {
+  margin-top: 0.5rem;
+  background: #3e3e3e;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s;
+}
+
+.btn-agregar-opcion:hover {
+  background: #7b4dff;
+}
+
 .chat-input {
   display: flex;
   gap: .5rem;
@@ -119,6 +176,20 @@ body {
   display: flex; justify-content: center; align-items: center;
 }
 .chat-input .btn-emoji { background: #3e3e3e; }
+
+.chat-input .btn-poll {
+  border: none;
+  background: #3e3e3e;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  cursor: pointer;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 1.1rem;
+}
+.chat-input .btn-poll:hover {
+  background: #7b4dff;
+}
 
 /* PANEL EMOJIS */
 .emoji-panel {
