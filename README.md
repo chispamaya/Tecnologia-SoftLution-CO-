@@ -20,12 +20,11 @@ Proyecto terminado, un sistema de comunicacion interna
 
 ### :speech_balloon: Chat
 - `Funcionalidad 6`: Chat en semitiempo real con miembros de la empresa y grupal  
-
+- `Funcionalidad 7`: Votar pools  
 ### :gear: Administración
-- `Funcionalidad 7`: Crear pools (solo administrador)  
-- `Funcionalidad 8`: Votar pools  
+- `Funcionalidad 8`: Crear pools (solo administrador)  
+
   
-Acceso al Proyecto;
 ## Tecnologías utilizadas
 
 <p align="center">
