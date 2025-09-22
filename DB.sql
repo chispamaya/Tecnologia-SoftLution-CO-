@@ -72,6 +72,9 @@ create table valorar (
 
 INSERT INTO `usuario` (`nombre`, `contrasenia`, `adminOno`, `email`) VALUES ('Grupo - Tecnologia', NULL, '1', NULL);
 
+INSERT INTO `usuario` (`nombre`, `contrasenia`, `adminOno`, `email`) VALUES ('admin', '12345678', '1', 'admin@tecnologia.com');
+
+
 
 
 
