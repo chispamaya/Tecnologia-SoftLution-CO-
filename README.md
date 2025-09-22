@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+  <img src="https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen">
 </p>
 
 Proyecto terminado, un sistema de comunicacion interna
