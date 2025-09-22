@@ -2,20 +2,37 @@
 
 
 <p align="center">
-<img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+  <img src="https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen">
 </p>
 
-Proyecto en desarrollo, un sistema de automatizacion de stock para Black Iron
+Proyecto terminado, un sistema de comunicacion interna
 
-## :hammer:Funcionalidades del proyecto
-- `Funcionalidad 1`: Visualizacion de stock
-- `Funcionalidad 2`: Advertencia ante falta de stock
-- `Funcionalidad 3`: Registrar pedido/compra
-- `Funcionalidad 4`: Cancelar pedido/compra y reintegro de stock 
-Acceso al Proyecto;
+## :hammer: Funcionalidades del proyecto
+
+### :key: Autenticación
+- `Funcionalidad 1`: Iniciar sesión y registrarse con dominio de la empresa  
+
+### :memo: Interacción con posts
+- `Funcionalidad 2`: Crear posts  
+- `Funcionalidad 3`: Mostrar posts en el muro  
+- `Funcionalidad 4`: Comentar posts  
+- `Funcionalidad 5`: Valorar posts (like o dislike)  
+
+### :speech_balloon: Chat
+- `Funcionalidad 6`: Chat en semitiempo real con miembros de la empresa y grupal  
+- `Funcionalidad 7`: Votar pools  
+### :gear: Administración
+- `Funcionalidad 8`: Crear pools (solo administrador)  
+
+  
 ## Tecnologías utilizadas
-![python_src_logo_icon_168037](https://github.com/user-attachments/assets/ab09d3aa-79f8-406a-b069-68eaf778359d)
 
+<p align="center">
+  <img width="150" height="150" alt="frontend" src="https://github.com/user-attachments/assets/bf21544b-c7a7-40c7-b402-2c7d21b3928b" />
+  <img width="150" height="150" alt="javascript-logo-javascript-icon-transparent-free-png" src="https://github.com/user-attachments/assets/a2540c70-46c0-4286-8432-12383e0356a4" />
+  <img width="150" height="150" alt="php-language-logo-hd-png-image-download-baby-elephant-clipart-qs6r" src="https://github.com/user-attachments/assets/f95035ec-8188-4241-a267-abc19f3c024e" />
+
+</p>
 
 ## Personas Contribuyentes;
 <a href="https://github.com/chispamaya/SoftLution-CO/graphs/contributors">
