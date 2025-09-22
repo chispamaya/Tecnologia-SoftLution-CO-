@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* --- VARIABLES Y ESTILOS BASE (de tu referencia) --- */
+:root {
+    --sideBarHeader: #14213d;
+    --texto: #ffffff;
+    --background: #212121;
+    --links: #8634AA;
+    --sideBarMain: #3C3C3C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    display: flex;
+}
+
+
+
+/* --- CONTENEDOR PRINCIPAL (de tu referencia) --- */
+.contenedor-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* --- NUEVOS ESTILOS PARA LA PÁGINA DE PERFIL --- */
+.contenido-perfil {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-contenedor {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.logo-perfil {
+    height: 150px; /* Ajusta el tamaño según tu logo */
+    object-fit: contain;
+}
+
+.formulario-perfil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nombre-usuario {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.email-usuario {
+    font-size: 1rem;
+    color: #a0a8b9;
+    margin-bottom: 3rem;
+}
+
+.campo-form {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #a0a8b9;
+    font-weight: 600;
+}
+
+.campo-form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.campo-form input::placeholder {
+    color: #777;
+}
+
+.acciones-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.acciones-form button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+.acciones-form button:hover {
+    opacity: 0.85;
+}
+
+.btn-descartar {
+    background-color: #d9534f;
+    color: #ffffff;
+}
+
+.btn-guardar {
+    background-color: #3c3c3c;
+    color: #888;
+}
