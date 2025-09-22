@@ -7,11 +7,24 @@
 
 Proyecto en desarrollo, un sistema de automatizacion de stock para Black Iron
 
-## :hammer:Funcionalidades del proyecto
-- `Funcionalidad 1`: Visualizacion de stock
-- `Funcionalidad 2`: Advertencia ante falta de stock
-- `Funcionalidad 3`: Registrar pedido/compra
-- `Funcionalidad 4`: Cancelar pedido/compra y reintegro de stock 
+## :hammer: Funcionalidades del proyecto
+
+### :key: Autenticación
+- `Funcionalidad 1`: Iniciar sesión y registrarse con dominio de la empresa  
+
+### :memo: Interacción con posts
+- `Funcionalidad 2`: Crear posts  
+- `Funcionalidad 3`: Mostrar posts en el muro  
+- `Funcionalidad 4`: Comentar posts  
+- `Funcionalidad 5`: Valorar posts (like o dislike)  
+
+### :speech_balloon: Chat
+- `Funcionalidad 6`: Chat en semitiempo real con miembros de la empresa y grupal  
+
+### :gear: Administración
+- `Funcionalidad 7`: Crear pools (solo administrador)  
+- `Funcionalidad 8`: Votar pools  
+  
 Acceso al Proyecto;
 ## Tecnologías utilizadas
 
