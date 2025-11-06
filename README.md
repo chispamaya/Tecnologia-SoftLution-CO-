@@ -1,4 +1,4 @@
-![Logotipo Softlution & CO)]([https://github.com/user-attachments/assets/4dc8180c-d971-4f43-a982-1674b3cf585b](https://github.com/user-attachments/assets/55fe6252-7dd3-4e73-bd06-2084a5d53f3d))
+![Logotipo Softlution & CO)](https://github.com/user-attachments/assets/4dc8180c-d971-4f43-a982-1674b3cf585b)
 
 
 <p align="center">
