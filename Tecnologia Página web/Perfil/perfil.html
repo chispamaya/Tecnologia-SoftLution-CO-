@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta - Softlution</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="/SideBar/style/inicio.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- Hamburguer button -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">  
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <img class="logo" src="/logo/logo.png" />
+    </header>
+  
+    <main class="main">
+      <aside class="sideBar">
+        
+        <button class="menu nomostrar" id="abrir"><i class="bi bi-list"></i></button>
+  
+        <nav class="sub-header" id="nav">
+          
+          <button class="nomostrar" id="cerrar"><i class="bi bi-x-lg"></i></button>
+  
+          <ul class="lista">
+            <li >
+              <a href="/Muro/muro.html" class="menu-item no">
+                <span class="material-symbols-outlined">home</span>
+                <span class="label">Inicio</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="/Mensajes/mensajes.html" class="menu-item no">
+                <span class="material-symbols-outlined">send</span>
+                <span class="label">Mensajes</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="/nueva_Publicacion/nuevapublicacion.html" class="menu-item no">
+                <span class="material-symbols-outlined">add_circle</span>
+                <span class="label">Nueva <br>publicación</span>
+              </a>
+            </li>
+  
+            <li class="perfil">
+              <a href="/Perfil/perfil.html" class="menu-item activo">
+                <span class="material-symbols-outlined">person</span>
+                <span class="label">Perfil</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        
+      </aside>
+    </main>
+
+    <div class="contenedor-principal">
+        <main class="contenido-perfil">
+            
+            <div class="logo-contenedor">
+                <img src="/SideBar/logo/logo.png" alt="Logo Softlution & Co" class="logo-perfil">
+            </div>
+
+            <form class="formulario-perfil" action="/php/perfil.php" method="POST">
+                <h1 class="nombre-usuario"></h1>
+                <p class="email-usuario"></p>
+
+                <div class="campo-form">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name ="pass" placeholder="Cambiar contraseña">
+                </div>
+
+                <div class="acciones-form">
+                    <button type="button" class="btn-descartar">Cerrar Sesión</button>
+                    <button type="submit" class="btn-guardar">Guardar</button>
+                </div>
+            </form>
+
+        </main>
+    </div>
+    <script src="/SideBar/main.js"></script>
+    <script src="/js/verificarS.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>    
+    <script src="/js/perfil.js"></script>
+</body>
+</html>

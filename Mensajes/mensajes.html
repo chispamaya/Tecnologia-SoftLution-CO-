@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensajes - Softlution</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+  <link rel="stylesheet" href="/SideBar/style/inicio.css"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- Hamburguer button -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">  
+</head>
+<body>
+
+  <header class="header">
+    <img class="logo" src="/logo/logo.png" />
+  </header>
+  <main class="main">
+    
+    <aside class="sideBar">
+        
+      <button class="menu nomostrar" id="abrir"><i class="bi bi-list"></i></button>
+
+      <nav class="sub-header" id="nav">
+        
+        <button class="nomostrar" id="cerrar"><i class="bi bi-x-lg"></i></button>
+
+        <ul class="lista">
+          <li >
+            <a href="/Muro/muro.html" class="menu-item no">
+              <span class="material-symbols-outlined">home</span>
+              <span class="label">Inicio</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="mensajes.html" class="menu-item activo">
+              <span class="material-symbols-outlined">send</span>
+              <span class="label">Mensajes</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/nueva_Publicacion/nuevapublicacion.html" class="menu-item no">
+              <span class="material-symbols-outlined">add_circle</span>
+              <span class="label">Nueva <br>publicación</span>
+            </a>
+          </li>
+
+          <li class="perfil">
+            <a href="/Perfil/perfil.html" class="menu-item no">
+              <span class="material-symbols-outlined">person</span>
+              <span class="label">Perfil</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+    </aside>
+  </main>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="contenedor-principal">
+    <main class="mensajes">
+
+      <!-- LISTA DE CHATS -->
+      <div class="lista-conversaciones">
+        <!-- Buscador con lupa -->
+        <div class="buscador-chats">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscarPersona" placeholder="Buscar personas...">
+        </div>
+
+        <h2>Chats</h2>
+        <ul class ="chats">
+        </ul>
+      </div>
+
+      <!-- CHAT -->
+      <section class="chat">
+        <div class="chat-header">
+          <img src="https://i.pravatar.cc/40?u=johndoe" class="avatar">
+          <span class="nombre-chat">John Doe</span>
+        </div>
+        <div class="chat-mensajes" id="chat1">
+          <div class="mensaje recibido">Hola ¿Cómo estás?</div>
+          <div class="mensaje enviado">Hola</div>
+          
+          <div class="mensaje recibido">chupame la pija</div>
+
+          <div class="mensaje enviado" data-author="tu">Prueba mensaje propio</div>
+          <div class="mensaje recibido" data-author="María">Prueba nombre</div>
+          <div class="mensaje encuesta recibido">
+            <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
+            <div class="opciones">
+              <button>🔵 Azul</button>
+              <button>🔴 Rojo</button>
+              <button>🟢 Verde</button>
+            </div>
+          </div>
+
+          <div class="mensaje encuesta enviado">
+            <p><strong>📊 Encuesta:</strong> ¿Cuál es tu color favorito?</p>
+            <div class="opciones">
+              <button>🔵 Azul</button>
+              <button>🔴 Rojo</button>
+              <button>🟢 Verde</button>
+            </div>
+          </div>
+
+          
+          <div class="mensaje encuesta enviado poolEnviar">
+            <label for="titulo">Titulo</label>
+            <input name="titulo" class="escribirOp"  type="text" placeholder="Añade un titulo">
+            
+            <div class="opciones">
+              <label for="opcion">Opciones</label>
+
+              <input name="opcion" class="escribirOp" type="text" placeholder="Escribe una opción...">
+            
+            </div>
+
+            <!-- Campo para añadir nueva opción -->
+            <div class="nueva-opcion">
+              <button type="submit" class="btn-agregar-opcion botoncito">➕ Añadir opción</button>
+            </div>
+
+            <div class="boton-enviar-encuesta">
+              <button type="submit" class="botoncito pa">Enviar encuesta</i></button>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="chat-input">
+          <button class="btn-emoji"><i class="fa-regular fa-face-smile"></i></button>
+          <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
+          <button class="btn-poll">📊</button> <!-- BOTÓN ENCUESTA -->
+          <button id="btnEnviar"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+
+        
+
+        <div class="emoji-panel oculto" id="emojiPanel">
+          😀 😁 😂 🤣 😍 😎 😢 😡 👍 👎 🙌 👀 ❤️ 🔥
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="/SideBar/main.js"></script>
+  <script src="/js/mensajes.js"></script>
+  <script src="/js/verificarS.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+</body>
+</html>

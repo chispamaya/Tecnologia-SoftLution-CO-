@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="/InicioSesionYregistro/style/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="header">
+    <img
+      class="logo"
+      src="/logo/logo.png"/>
+  </div>
+  <div class="registrarse-dark">    
+    <form class="form" action="/php/registro.php" method="post">
+      <div class="top">
+        <h1>REGISTRARSE</h1>
+      </div>
+      <hr>
+      <label class="label"for="user">Ingrese su usuario</label>
+      <input class="inputForm"type="text" name="user" required>
+
+      <label class="label"for="email">Ingrese su email</label>
+      <input class="inputForm"type="email" name="email" required>
+
+      <label class="label"for="password">Ingrese su contraseña</label>
+      <input class="inputForm" name="password" type="password" required>
+
+      <button type="submit">Registrate</button>
+
+    </form>
+
+  </div>
+<script src="/js/verificarS.js" ></script>
+<script src="/js/registro.js"></script>
+</body>
+</html>

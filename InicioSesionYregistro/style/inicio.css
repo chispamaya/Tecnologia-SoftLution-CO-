@@ -1,0 +1,62 @@
+:root{
+    --sideBarHeader:#14213d;
+    --texto:#ffffff;
+    --background:#212121;
+    --botonV:#341243;
+    --links: #8634AA;
+    --backgroundForm:#000000;
+    --mensajeRecibidoChatSelected:#9F9F9F;
+    --mensajeEnviado:#838383;
+    --sideBarMain: #3C3C3C;
+    --chatNotSelected: #484848;
+}
+
+.header{
+    flex: 1;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBar {
+    background-color: var(--sideBarHeader);
+    width: 20%;
+    padding: 10px;
+  }
+  
+/* Botón de la sidebar */
+.botonSideBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;                /* espacio entre icono y texto */
+    width: 100%;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    color: var(--texto);
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Ícono */
+.botonSideBar .material-symbols-outlined {
+    font-size: 50px;          /* tamaño del ícono */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sideBar {
+        width: 60px;            /* sidebar más angosta */
+    }
+
+    .botonSideBar .texto {
+        display: none;          /* ocultar texto en pantallas chicas */
+    }
+
+    .botonSideBar .material-symbols-outlined {
+        font-size: 32px;        /* agrandar ícono para que sea más visible */
+    }
+}
